@@ -27,7 +27,8 @@ export default class MatiButton extends LitElement {
       loading: { type: Boolean },
       color: { type: String },
       language: { type: String },
-      metadata: { type: String }
+      metadata: { type: String },
+      flowId: { type: String }
     };
   }
 
@@ -107,7 +108,7 @@ export default class MatiButton extends LitElement {
     this.loading = true;
     this.removeFrame();
     const frame = document.createElement("mati-frame");
-    for (const key of ["signupHost", "clientId", "metadata"]) {
+    for (const key of ["signupHost", "clientId", "metadata", "flowId"]) {
       this[key] && frame.setAttribute(key, this[key]);
     }
     window.document.body.appendChild(frame);

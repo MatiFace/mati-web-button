@@ -3,13 +3,13 @@
 How it looks like in your code:
 
 ```
-<mati-button clientid="<YOUR_CLIENT_ID>" metadata="<JSON_METADATA_STRING>" />
+<mati-button clientid="<YOUR_CLIENT_ID>" metadata="<JSON_METADATA_STRING>" flowId="<YOUR_FLOW_ID>"  />
 ```
 
 And with "live" configuration:
 
 ```
-<mati-button clientid="1234567890abcdef12345678" metadata="{'ourKey':'ourValue','anotherKey':'anotherValue'}" />
+<mati-button clientid="1234567890abcdef12345678" metadata="{'ourKey':'ourValue','anotherKey':'anotherValue'}" flowId="1234567890abcdef12345678" />
 ```
 
 How it looks like on your page:

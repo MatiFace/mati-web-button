@@ -6,7 +6,8 @@ export default class MatiFrame extends LitElement {
       clientId: { type: String },
       disabled: { type: Boolean, reflect: true },
       signupHost: { type: String },
-      metadata: { type: String }
+      metadata: { type: String },
+      flowId: { type: String }
     };
   }
 
@@ -37,7 +38,7 @@ export default class MatiFrame extends LitElement {
 
   render() {
     const url = new URL(this.signupHost);
-    [["merchantToken", this.clientId], ["metadata", this.metadata]]
+    [["merchantToken", this.clientId], ["metadata", this.metadata], ["flowId", this.flowId]]
       .filter(([unused, value]) => value)
       .forEach(([attr, value]) => url.searchParams.append(attr, value));
     return html`
