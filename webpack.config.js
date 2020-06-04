@@ -17,6 +17,16 @@ module.exports = {
     noParse: /webcomponents/,
     rules: [
       {
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"]
+          }
+        }
+      },
+      {
         test: /\.(svg|ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani)(\?.*)?$/,
         loader: "file-loader",
         query: { name: "[name].[hash:8].[ext]" }
